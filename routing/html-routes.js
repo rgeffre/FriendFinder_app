@@ -1,6 +1,7 @@
 //Adding dependancies
 var path = require('path');
-
+var friends = require('../app/data/friends.js');
+console.log(JSON.stringify(friends));
 //Adding routes to the html content and setting up the module export so we can
 //include the routes in the server.js file
 
@@ -11,7 +12,7 @@ module.exports = function(app) {
   });
   //Default route that sends users to the home page
   //if no matching route is found
-  app.get('*', function(req, res) {
+  app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, '../public/home.html'));
   });
 };

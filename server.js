@@ -14,10 +14,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //Adding the requirements for the routing files
-//require('./routing/api-routes.js')(app);
+require('./routing/api-routes.js')(app);
 require('./routing/html-routes.js')(app);
 
 //set up listener here
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
+
+module.exports = app;
