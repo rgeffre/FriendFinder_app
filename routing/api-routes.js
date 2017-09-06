@@ -12,6 +12,8 @@ module.exports = function(app) {
 
     console.log(JSON.stringify(surveyData));
   });
+//TODO , put in an API GET route to display all possible friends
+
 
 //API POST route to handle incoming survey data
 //this route will also handle compatibility logic
@@ -26,4 +28,4 @@ module.exports = function(app) {
 
 
 
-//TODO , put in an API GET route to display all possible friends
+
